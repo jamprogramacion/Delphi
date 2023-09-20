@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/09/20 18:55:44.000.408,=rtl.dcp</Transaction>
+    <Transaction>2023/09/20 18:56:47.000.229,D:\Documentos\Embarcadero\Studio\Projects\Package1.dproj=D:\GitHub\Delphi\JAMUtils.dproj</Transaction>
+    <Transaction>2023/09/20 18:57:23.000.999,=D:\GitHub\Delphi\Unit1.pas</Transaction>
+    <Transaction>2023/09/20 18:59:15.000.024,=D:\GitHub\Delphi\JAMUtils\Unit1.pas</Transaction>
+    <Transaction>2023/09/20 18:59:29.000.108,D:\GitHub\Delphi\JAMUtils\uIdentDocuments.pas=D:\GitHub\Delphi\JAMUtils\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>
