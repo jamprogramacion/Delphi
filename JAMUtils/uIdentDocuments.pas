@@ -28,15 +28,24 @@ var
   nPosNIF: Integer;
 
 begin
+  if sDNI = '' then begin
+    Result := False;
+    Exit;
+  end;
+
   acDNI := sDNI.ToUpper.ToCharArray;
   nPosNIE := NIE_TYPE.IndexOf(acDNI[0]);
   nPosNIF := NIF_TYPE.IndexOf(acDNI[0]);
   if nPosNIE <> -1 then begin
-    nDNISum := StrToInt(NIE_TYPE_SUM[nPosNIE] + sDNI.SubString(1, Length(sDNI) - 2));
+    nDNISum := StrToIntDef(NIE_TYPE_SUM[nPosNIE] + sDNI.SubString(1, Length(sDNI) - 2), -1);
   end else if nPosNIF <> -1 then begin
-    nDNISum := StrToInt(NIF_TYPE_SUM[nPosNIF] + sDNI.SubString(1, Length(sDNI) - 2));
+    nDNISum := StrToIntDef(NIF_TYPE_SUM[nPosNIF] + sDNI.SubString(1, Length(sDNI) - 2), -1);
   end else begin
-    nDNISum := sDNI.SubString(0, Length(sDNI) - 1).ToInteger;
+    nDNISum := StrToIntDef(sDNI.SubString(0, Length(sDNI) - 1), -1);
+  end;
+  if nDNISum = -1 then begin
+    Result := False;
+    Exit;
   end;
 
   Result := NIF_CONTROL[nDNISum mod 23] = acDNI[Length(sDNI) - 1];
@@ -62,6 +71,11 @@ var
   nOdd: Integer;
 
 begin
+  if sCIF = '' then begin
+    Result := False;
+    Exit;
+  end;
+
   acCIF := sCIF.ToUpper.ToCharArray;
   if CIF_CONTROL.IndexOf(acCIF[0]) = -1 then begin
     Result := False;
@@ -72,17 +86,24 @@ begin
 
   nA := 0;
   nCont := 1;
-  while nCont < Length(acCIFNum) do begin
-    nA := nA + StrToInt(acCIFNum[nCont]);
-    Inc(nCont, 2);
-  end;
 
-  nB := 0;
-  nCont := 0;
-  while nCont < Length(acCIFNum) do begin
-    nOdd := 2 * StrToInt(acCIFNum[nCont]);
-    nB := nB + (nOdd div 10) + (nOdd mod 10);
-    Inc(nCont, 2);
+  try
+    while nCont < Length(acCIFNum) do begin
+      nA := nA + StrToInt(acCIFNum[nCont]);
+      Inc(nCont, 2);
+    end;
+
+    nB := 0;
+    nCont := 0;
+    while nCont < Length(acCIFNum) do begin
+      nOdd := 2 * StrToInt(acCIFNum[nCont]);
+      nB := nB + (nOdd div 10) + (nOdd mod 10);
+      Inc(nCont, 2);
+    end;
+  except on E: Exception do begin
+      Result := False;
+      Exit;
+    end;
   end;
 
   nC := nA + nB;
