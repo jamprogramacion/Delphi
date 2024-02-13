@@ -1,0 +1,45 @@
+unit udmRedir;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Classes, HTTPApp;
+
+type
+  TdmRedir = class(TWebModule)
+    procedure dmRedirwactBannerAction(Sender: TObject;
+      Request: TWebRequest; Response: TWebResponse; var Handled: Boolean);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dmRedir: TdmRedir;
+
+implementation
+
+{$R *.DFM}
+
+uses uComun;
+
+procedure TdmRedir.dmRedirwactBannerAction(Sender: TObject;
+  Request: TWebRequest; Response: TWebResponse; var Handled: Boolean);
+
+var
+  sUrl: string;
+  nTipo: Integer;
+
+begin
+  sUrl := Request.QueryFields.Values['sUrl'];
+  nTipo := StrToInt(Request.QueryFields.Values['nTipo']);
+  WriteBanner(Request,sUrl,nTipo);
+  if Request.QueryFields.Values['repl_char'] <> '' then
+    Response.Location := StringReplace(sUrl,Request.QueryFields.Values['repl_char'],
+      '&',[rfReplaceAll])
+  else
+    Response.Location := sUrl;
+end;
+
+end.

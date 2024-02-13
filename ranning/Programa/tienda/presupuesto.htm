@@ -1,0 +1,311 @@
+<html>
+	<head>
+		<!--
+		<script language="JavaScript">
+			function rtclk(e) {
+				if (document.all && !document.getElementById) {
+					if (event.button == 2) return false;
+				} 
+				else if (document.layers) {
+					if (e.which == 2 || e.which == 3) {
+						return false;
+					}
+				}
+			} 
+			
+			if (document.layers) document.captureEvents(Event.MOUSEDOWN);
+			document.onmousedown = rtclk;
+			document.oncontextmenu = function() {return false;}
+		</script>
+		-->
+		<style type="text/css">
+		<!--
+			body {background: #ccff33;
+			font-family: Tahoma;
+			font-size: 14px;
+			}
+			
+			.fondo_ranas {background-image: url(http://<#path>/_images/presupuestos/ranitas.gif);
+				background-repeat: repeat;}
+			
+			.subrayado {text-decoration: underline;}
+
+			.fuente_grande {font-size: 18px;}
+
+			.fuente_pequena {font-size: 12px;}
+			
+			.fuente_muy_pequena {font-size: 10px;}
+
+			.fuente_ultra_pequena {font-size: 6px;}
+
+			.fuente_negrita {font-weight: bold;}
+			
+			.fuente_roja {color: red;}
+			
+			.margen_izquierdo {margin-left: 5px;}
+
+			.al_centrada {text-align: center;}
+			
+			td.al_derecha {text-align: right;}
+			
+			td.margen_izquierdo {text-align: left;}
+
+			table.logos {border-collapse: collapse;
+				table-layout: auto;
+			}
+
+			table.logos td {empty-cells: show;
+				border-width: 0;
+				text-align: left;
+			}
+				
+			table.logos td.derecha {empty-cells: show;
+				border-width: 0;
+				text-align: right;
+			}
+				
+			table.productos {border-collapse: collapse;
+				table-layout: auto;
+				font-size: 10px;
+			}
+				
+			table.productos th {border-width: 2px;
+				border-style: solid;
+				border-color: black;
+				text-align: center;
+				padding: 3px;
+			}
+				
+			table.productos td {empty-cells: show;
+				border-width: 1px;
+				border-color: black;
+				border-style: solid;
+				text-align: left;
+				padding: 3px;
+			}
+				
+			table.productos td.precio {empty-cells: show;
+				border-width: 1px;
+				border-color: black;
+				border-style: solid;
+				text-align: right;
+				padding: 3px;
+				font-weight: bold;
+			}
+		-->
+		</style>
+	
+		<title>Presupuesto solicitado</title>
+	</head>
+	
+	<body class="fondo_ranas">
+  	<table class="logos">
+  	<tr>
+  	<td>
+	  	<img src="http://<#path>/_images/presupuestos/rana.gif" width="54" height="54">
+	  </td>
+	  <td>
+	  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	  </td>
+	  <td class="derecha">
+	  	<img src="http://<#path>/_images/presupuestos/ranningcom.gif" width="245" height="54">
+	  </td>
+	  </tr>
+  	</table>
+		<p class="fuente_grande">Presupuesto emitido el día <#fecha>
+		<p class="fuente_pequena fuente_negrita fuente_roja">Esto es un presupuesto y no 
+		una factura. Necesitamos la confirmación para poder cursar el pedido.</p>
+		</p>
+		<#canarias>
+		<table class="productos">
+		  <tr>
+		  <td colspan="10">
+		  <p class="margen_izquierdo fuente_negrita fuente_roja">Código de cliente web:&nbsp;<#id_cliente_web></p>
+		  </td>
+		  </tr>
+		  <tr>
+		  <td colspan="10">
+		  <span class="fuente_negrita">Enviar a:</span>
+		  <br>
+		  <#datos_envio>
+		  </td>
+		  </tr>
+			<tr>
+			<th>Código</th>
+			<th>Marca</th>
+			<th>Producto</th>
+			<th>Cod Color</th>
+			<th>Color</th>
+			<th>Talla</th>
+			<th>Unidades</th>
+			<th>PVP c/u <#iva_canarias></th>
+			<th>Descuento</th>
+			<th>Precio</th>
+			</tr>
+			<#productos>
+			</tr>
+			<tr>
+			<td class="fuente_negrita" colspan="9">Total artículos</td>
+			<td class="precio">
+				<#total_articulos>
+			</td>
+			</tr>
+			<tr>
+			<td class="fuente_negrita" colspan="9">Gastos de envío (pago por transferencia, envío por <#agencia_envio>)</td>
+			<td class="precio">
+				<#gastos_envio>
+			</td>
+			</tr>
+			<tr>
+			<td class="fuente_pequena" colspan="10">&nbsp;</td>
+			</tr>
+			<tr>
+			<td class="fuente_negrita" colspan="9">Total</td>
+			<td class="precio">
+				<#total>
+			</td>
+			</tr>
+		</table>
+		<p class="fuente_pequena">
+		<span class="fuente_negrita">Este presupuesto tiene una validez de 7 días naturales 
+		desde la fecha arriba indicada.</span>
+		<br>
+		<span class="fuente_roja">(Válido hasta final del día <#fecha2>)</span>
+		<br><br>
+		- Si tienes alguna duda o aclaración respecto al pedido responde a este correo.
+		<br><br> 
+		- Si quieres confirmar o anular el pedido tal cual pincha este enlace para hacerlo automáticamente
+		<br>
+		<span class="fuente_ultra_pequena">
+		<a href="http://<#path>/cgi-bin/wwwMail.exe/wmail_presupuesto?f=<#enlace>
+		" target="_blank">http://<#path>/cgi-bin/wwwMail.exe/wmail_presupuesto?f=<#enlace>
+		</span></a>
+		<br><br>
+		- Si quieres ver el estado de tu pedido pincha este enlace
+		<br>
+		<span class="fuente_ultra_pequena">
+		<a href="http://<#path>/cgi-bin/wwwCarrito.exe/wcarrito?ver_id=<#id_cliente_web>
+		" target="_blank">http://<#path>/cgi-bin/wwwCarrito.exe/wcarrito?ver_id=<#id_cliente_web>
+		</span></a>
+		<br><br>
+		En caso de pago por transferencia, los datos de nuestra cuenta son 
+		<br><br>
+		<span class="fuente_roja fuente_negrita">IBAN: <#ccc></span> a nombre de <span class="fuente_roja fuente_negrita">RanningSport S.L.</span>
+		<br>
+		<span class="fuente_roja fuente_negrita">SWIFT: BBVAESMM</span>
+		<br>
+		<span class="fuente_roja fuente_negrita">Banco:</span> BBVA
+		<br>
+		<span class="fuente_roja fuente_negrita">Dirección:</span> C/ Carlina 8. 28011 Madrid. Spain
+		<br><br>
+		No enviaremos el pedido hasta que nos envíes un comprobante de la transferencia o el ingreso, 
+		por e-mail a la dirección desde la que te enviamos este correo 
+		(algunos bancos lo permiten en transferencias por Internet).
+		</p>
+		<br><br>
+
+	  <p class="margen_izquierdo fuente_pequena fuente_negrita">
+		Condiciones de compra.
+		</p>
+	  <p class="margen_izquierdo fuente_pequena">
+		<span class="fuente_negrita subrayado">Datos de contacto</span>
+		<br>
+		Puede contactar con nosotros pinchando en este enlace <a href="http://www.ranning.com/cgi-bin/wwwMail.exe/wmail?subject=quienes_somos" target="_blank">
+	  http://www.ranning.com/cgi-bin/wwwMail.exe/wmail?subject=quienes_somos</a> o bien enviando un correo electrónico a porley@ranning.com. Recomendamos la primera forma de contacto, 
+		ya que la dirección de correo se nos llenará de correo no deseado (spam) y será difícil distinguir entre el correo 
+		"bueno" y el "malo".
+		<br><br>
+		También puede contactar con nosotros en:
+		<br><br>
+		Ranning<br>
+		Pso. de Extremadura 157. 28011 Madrid.<br>
+		Tel: 914642292
+		<br><br>
+		<span class="fuente_negrita subrayado">Vigencia de los precios y ofertas</span>
+		<br>
+		Los precios y descuentos anunciados son vigentes para los productos ofrecidos en ese momento. Las tallas y 
+		cantidades disponibles se actualizan al final de cada día, de modo que éstas pueden sufrir alguna variación 
+		durante el transcurso del mismo a medida que se venden artículos.
+		<br><br>
+		En productos por encargo el precio y/o el descuento pueden sufrir variaciones, debido a que el encargo puede suponernos algunos costes, 
+		y a que el coste para nosotros puede variar con respecto al que tenemos en tienda.
+		<br><br>
+		En casos de ofertas puntuales, en cada oferta se detallará la vigencia de la misma.
+		<br><br>
+		<span class="fuente_negrita subrayado">Derecho de desistimiento y cambios</span>
+		<br>
+		<span class="fuente_negrita fuente_roja">
+		Según Real Decreto Legislativo 1/2007 de 16 de Noviembre, en sus artículos 69 y siguientes, el cliente tiene 
+		derecho de desistimiento de la compra en un plazo de 7 días hábiles. Así mismo, los gastos de devolución 
+		correrán a cargo del cliente.
+		<br>
+		El documento electrónico en el que se formaliza el contrato será archivado, sin que éste sea accesible.
+		</span>
+		<br>
+		Puedes leerlo en este enlace <a href="http://www.boe.es/buscar/doc.php?id=BOE-A-2007-20555" target="_blank">
+		http://www.boe.es/buscar/doc.php?id=BOE-A-2007-20555</a>
+		<br><br>
+		Al margen de dicha ley, y tal y como hemos venido haciendo desde que iniciamos la venta por Internet 
+		y muchos de nuestros clientes saben, cualquier producto adquirido en nuestra tienda puede ser devuelto siempre 
+		y cuando esté en su estado original, y el cliente deberá contactar previamente con nosotros para que 
+		tengamos conocimiento de la devolución.
+		<br><br>
+		En caso de devoluciones por fallos recogidos en la garantía del producto, el cliente deberá contactar con nosotros 
+		para que verifiquemos que procede la devolución del mismo.
+		<br><br>
+		En cualquiera de los casos, los pasos a seguir para cambios y devoluciones pueden verse <a href="http://www.ranning.com/como_cambiar.htm" title="Pincha aquí para saber cómo cambiar algo que no te vale de talla o para devolverlo...">
+		aquí</a>.
+		<br><br>
+		En caso de querer ejercer el derecho de desistimiento, ponemos a su disposición el documento necesario al final de este presupuesto.
+		<br><br>
+		<span class="fuente_negrita subrayado">Garantías</span>
+		<br>
+		Las garantías de los productos son las que otorgan los fabricantes de los mismos. En caso de productos en 
+		garantía nosotros nos encargamos de las gestiones necesarias para hacer llegar el mismo al servicio técnico 
+		correspondiente. Si el fabricante considera que el fallo del artículo no queda cubierto por la garantía y esto 
+		ocasiona gastos, éstos correran a cargo del cliente.
+		<br><br>
+		<span class="fuente_negrita subrayado">Reclamaciones</span>
+		<br>
+		La dirección en la cual se pueden encontrar hojas de reclamaciones es:
+		<br><br>
+		Ranning<br>
+		Pso. de Extremadura 157. 28011 Madrid.
+		<br><br>
+		<p class="margen_izquierdo fuente_pequena">
+		RanningSport S.L. Inscrita en el Registro Mercantil de Madrid, tomo 20313, libro 0, folio 42, 
+		Sección 8, hoja M359159, inscripción 1, fecha 28/7/2004. NIF B84028687.
+		</p>
+		<br><br>
+		<br><br>
+		<p class="fuente_grande fuente_negrita subrayado al_centrada">DOCUMENTO DE DESISTIMIENTO</p>
+		<p class="margen_izquierdo fuente_roja">
+		Según Real Decreto Legislativo 1/2007 de 16 de Noviembre, en sus artículos 69 y siguientes, el cliente tiene 
+		derecho de desistimiento de la compra en un plazo de 7 días hábiles. Así mismo, los gastos de devolución 
+		correrán a cargo del cliente.
+		</p>
+		<br>
+		<p class="margen_izquierdo fuente_negrita fuente_roja">Código de pedido (contrato):&nbsp;<#id_cliente_web></p>
+		<p class="margen_izquierdo fuente_negrita fuente_pequena">Datos del cliente:</p>
+		<p class="margen_izquierdo fuente_pequena"><#datos_envio_desistimiento></p>
+		<p class="margen_izquierdo fuente_pequena fuente_negrita">Este documento debe enviarse cumplimentado a:</p>
+		<p class="margen_izquierdo fuente_pequena">
+		RanningSport S.L.<br>
+		Pso. de Extremadura 157<br>
+		28011 Madrid
+		<br><br>
+		</p>
+		<p class="margen_izquierdo fuente_negrita fuente_roja">Motivo del desistimiento:</p>
+		<br><br>
+		<br><br>
+		<br><br>
+		<br><br>
+		<p class="margen_izquierdo fuente_pequena">
+		RanningSport S.L. Inscrita en el Registro Mercantil de Madrid, tomo 20313, libro 0, folio 42, 
+		Sección 8, hoja M359159, inscripción 1, fecha 28/7/2004. NIF B84028687.
+		</p>
+	</body>
+</html>

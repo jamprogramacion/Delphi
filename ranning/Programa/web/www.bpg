@@ -1,0 +1,49 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = wwwCarreras.exe wwwEnlaces.exe wwwEntrada.exe wwwMail.exe \
+  wwwNoticias.exe wwwRanning.exe wwwCarrito.exe wwwRedir.exe wwwVacaciones.exe \
+  wwwImagen.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+wwwCarreras.exe: wwwCarreras.dpr
+  $(DCC)
+
+wwwEnlaces.exe: wwwEnlaces.dpr
+  $(DCC)
+
+wwwEntrada.exe: wwwEntrada.dpr
+  $(DCC)
+
+wwwMail.exe: wwwMail.dpr
+  $(DCC)
+
+wwwNoticias.exe: wwwNoticias.dpr
+  $(DCC)
+
+wwwRanning.exe: wwwRanning.dpr
+  $(DCC)
+
+wwwCarrito.exe: wwwCarrito.dpr
+  $(DCC)
+
+wwwRedir.exe: wwwRedir.dpr
+  $(DCC)
+
+wwwVacaciones.exe: wwwVacaciones.dpr
+  $(DCC)
+
+wwwImagen.exe: wwwImagen.dpr
+  $(DCC)
+
+

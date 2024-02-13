@@ -1,0 +1,1 @@
+mysqldump --user= --password= ranning | mysql --host= --user= --password= --database=
