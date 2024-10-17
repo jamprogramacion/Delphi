@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2023/09/12 19:02:33.000.752,=D:\Documentos\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2023/09/12 19:05:11.000.629,D:\Documentos\Embarcadero\Studio\Projects\Unit1.pas=D:\GitHub\TECH-OUN\Delphi\ImportData\frmMain.pas</Transaction>
+    <Transaction>2023/09/12 19:05:11.000.629,D:\Documentos\Embarcadero\Studio\Projects\Unit1.dfm=D:\GitHub\TECH-OUN\Delphi\ImportData\frmMain.dfm</Transaction>
+    <Transaction>2023/09/12 19:05:25.000.198,D:\Documentos\Embarcadero\Studio\Projects\Project1.dproj=D:\GitHub\TECH-OUN\Delphi\ImportData\ImportData.dproj</Transaction>
+    <Transaction>2023/09/12 19:06:13.000.151,D:\GitHub\TECH-OUN\Delphi\ImportData\frmMain.pas=D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmMain.pas</Transaction>
+    <Transaction>2023/09/12 19:06:13.000.151,D:\GitHub\TECH-OUN\Delphi\ImportData\frmMain.dfm=D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmMain.dfm</Transaction>
+    <Transaction>2023/09/12 19:10:59.000.567,=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/09/12 19:11:20.000.116,D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas=D:\GitHub\TECH-OUN\Delphi\ImportData\udmImportData.pas</Transaction>
+    <Transaction>2023/09/12 19:11:20.000.116,D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.dfm=D:\GitHub\TECH-OUN\Delphi\ImportData\udmImportData.dfm</Transaction>
+    <Transaction>2023/09/12 23:59:58.000.825,=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/09/13 00:01:20.000.615,D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmUsersImport.dfm=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.dfm</Transaction>
+    <Transaction>2023/09/13 00:01:20.000.615,D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmUsersImport.pas=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/09/15 11:36:49.000.105,=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/09/15 11:37:14.000.192,D:\GitHub\TECH-OUN\Delphi\ImportData\udmUsersImport.pas=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/09/15 11:37:14.000.192,D:\GitHub\TECH-OUN\Delphi\ImportData\udmUsersImport.dfm=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.dfm</Transaction>
+    <Transaction>2023/09/15 11:37:21.000.847,=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/09/15 11:37:35.000.639,D:\GitHub\TECH-OUN\Delphi\ImportData\udmEventsImport.dfm=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.dfm</Transaction>
+    <Transaction>2023/09/15 11:37:35.000.639,D:\GitHub\TECH-OUN\Delphi\ImportData\udmEventsImport.pas=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/09/20 20:21:12.000.048,=D:\GitHub\Delphi\JAMUtils\uIdentDocuments.pas</Transaction>
+    <Transaction>2023/10/03 00:36:39.000.239,=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/10/03 00:36:59.000.103,D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmEventsImport.dfm=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.dfm</Transaction>
+    <Transaction>2023/10/03 00:36:59.000.103,D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmEventsImport.pas=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/10/27 18:31:46.000.249,=D:\GitHub\TECH-OUN\Delphi\ImportData\ImportData_Icon.ico</Transaction>
+    <Transaction>2023/11/01 11:12:21.000.103,=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/11/01 11:16:07.000.026,D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.dfm=D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmUsersList.dfm</Transaction>
+    <Transaction>2023/11/01 11:16:07.000.026,D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas=D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmUsersList.pas</Transaction>
+    <Transaction>2023/11/07 12:05:07.000.545,=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/11/07 12:05:38.000.313,D:\GitHub\TECH-OUN\Delphi\ImportData\udmElements.pas=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/11/07 12:05:38.000.313,D:\GitHub\TECH-OUN\Delphi\ImportData\udmElements.dfm=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.dfm</Transaction>
+    <Transaction>2023/11/07 17:49:22.000.448,=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/11/07 17:51:39.000.938,D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas=D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmElements.pas</Transaction>
+    <Transaction>2023/11/07 17:51:39.000.938,D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.dfm=D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmElements.dfm</Transaction>
+    <Transaction>2023/11/08 18:07:42.000.982,=D:\GitHub\TECH-OUN\Delphi\ImportData\udmElements.pas</Transaction>
+    <Transaction>2023/11/08 18:08:10.000.375,=D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmElements.pas</Transaction>
+    <Transaction>2023/11/09 17:22:32.000.707,=D:\GitHub\TECH-OUN\Delphi\ImportData\ImportData.ini</Transaction>
+    <Transaction>2023/11/30 18:02:47.000.740,=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/11/30 18:03:13.000.299,D:\GitHub\TECH-OUN\Delphi\ImportData\udmUsersElementsImport.dfm=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.dfm</Transaction>
+    <Transaction>2023/11/30 18:03:13.000.299,D:\GitHub\TECH-OUN\Delphi\ImportData\udmUsersElementsImport.pas=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/11/30 19:29:55.000.778,=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/11/30 19:30:18.000.613,D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmUsersElementsImport.pas=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/11/30 19:30:18.000.613,D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmUsersElementsImport.dfm=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.dfm</Transaction>
+    <Transaction>2023/11/30 23:24:51.000.906,=D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmUsersElementsImport.pas</Transaction>
+    <Transaction>2023/12/08 12:49:18.000.778,=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/12/08 12:49:31.000.939,D:\GitHub\TECH-OUN\Delphi\ImportData\uApiLogin.pas=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/12/08 12:55:24.000.221,D:\GitHub\TECH-OUN\Delphi\ImportData\uApiLogin.pas=</Transaction>
+    <Transaction>2023/12/09 14:11:09.000.074,=D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas</Transaction>
+    <Transaction>2023/12/09 14:11:22.000.992,D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.dfm=D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmLogin.dfm</Transaction>
+    <Transaction>2023/12/09 14:11:22.000.992,D:\GitHub\TECH-OUN\Delphi\ImportData\Unit1.pas=D:\GitHub\TECH-OUN\Delphi\ImportData\ufrmLogin.pas</Transaction>
+    <Transaction>2024/01/05 17:57:49.000.483,=D:\GitHub\whyuon-import\Delphi\ImportData\Win64\Debug\ImportData.ini</Transaction>
+    <Transaction>2024/01/05 17:58:06.000.793,=D:\GitHub\whyuon-import\Delphi\ImportData\Win64\Release\ImportData.ini</Transaction>
+  </Transactions>
+</BorlandProject>

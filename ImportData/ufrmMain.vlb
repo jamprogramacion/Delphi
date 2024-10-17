@@ -1,0 +1,12 @@
+﻿[dmUsersImport.tblUsersImport]
+Visible=False
+
+[dmEventsImport.tblEventsImport]
+Visible=False
+
+[dmEventsImport.sqlCategories]
+Visible=False
+
+[dmEventsImport.sqlEventsImportCategories]
+Visible=False
+
