@@ -3,3 +3,6 @@ JAMUtils/__history
 HRBluetooth/*.~*
 HRBluetooth/__history
 HRBluetooth/__recovery
+HRBluetooth/Win64/Debug
+HRBluetooth/Abdroid/Debug
+HRBluetooth/Abdroid64/Debug
