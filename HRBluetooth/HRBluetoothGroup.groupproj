@@ -1,0 +1,36 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{27F2F5BA-6ED4-4E7D-B7DC-FFE522AE8000}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="HRBluetooth.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="HRBluetooth">
+        <MSBuild Projects="HRBluetooth.dproj"/>
+    </Target>
+    <Target Name="HRBluetooth:Clean">
+        <MSBuild Projects="HRBluetooth.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HRBluetooth:Make">
+        <MSBuild Projects="HRBluetooth.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="HRBluetooth"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="HRBluetooth:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="HRBluetooth:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

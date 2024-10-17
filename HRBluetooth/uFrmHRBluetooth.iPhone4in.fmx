@@ -1,0 +1,72 @@
+inherited frmHRBluetooth_iPhone4in: TfrmHRBluetooth_iPhone4in
+  ClientHeight = 548
+  ClientWidth = 320
+  DesignerMasterStyle = 0
+  inherited TopToolBar: TToolBar
+    Size.Width = 320.000000000000000000
+    inherited lblToolBar: TLabel
+      Size.Width = 320.000000000000000000
+    end
+  end
+  inherited tabcMain: TTabControl
+    Size.Width = 320.000000000000000000
+    Size.Height = 460.000000000000000000
+    Sizes = (
+      320s
+      460s
+      320s
+      460s)
+    inherited tabDevices: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited pnDevices: TPanel
+        Size.Width = 320.000000000000000000
+        Size.Height = 294.000000000000000000
+        inherited btnScan: TButton
+          Position.Y = 272.000000000000000000
+          Size.Width = 320.000000000000000000
+        end
+        inherited lbDevices: TListView
+          Size.Width = 320.000000000000000000
+          Size.Height = 272.000000000000000000
+        end
+      end
+      inherited pnDetails: TPanel
+        Position.Y = 294.000000000000000000
+        Size.Width = 320.000000000000000000
+        inherited lbDeviceDetails: TListView
+          Size.Width = 320.000000000000000000
+        end
+      end
+    end
+    inherited tabChannels: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited pnService: TPanel
+        Size.Width = 320.000000000000000000
+        Size.Height = 262.000000000000000000
+        inherited btnReadData: TButton
+          Position.Y = 240.000000000000000000
+          Size.Width = 320.000000000000000000
+        end
+        inherited lbCharacteristics: TListView
+          Size.Width = 320.000000000000000000
+          Size.Height = 240.000000000000000000
+        end
+      end
+      inherited pnData: TPanel
+        Position.Y = 262.000000000000000000
+        Size.Width = 320.000000000000000000
+        inherited txtData: TMemo
+          Size.Width = 320.000000000000000000
+          Viewport.Width = 320.000000000000000000
+          Viewport.Height = 198.000000000000000000
+        end
+      end
+    end
+  end
+  inherited BottomToolBar: TToolBar
+    Position.Y = 504.000000000000000000
+    Size.Width = 320.000000000000000000
+  end
+end

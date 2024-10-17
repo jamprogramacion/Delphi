@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/09/22 18:24:29.000.643,D:\GitHub\Delphi\HRBluetooth\HeaderFooterFormwithNavigation.fmx=D:\GitHub\Delphi\HRBluetooth\uFrmHRBluetooth.fmx</Transaction>
+    <Transaction>2024/09/22 18:24:29.000.643,D:\GitHub\Delphi\HRBluetooth\HeaderFooterFormwithNavigation.pas=D:\GitHub\Delphi\HRBluetooth\uFrmHRBluetooth.pas</Transaction>
+    <Transaction>2024/09/22 18:25:40.000.768,D:\GitHub\Delphi\HRBluetooth\HeaderFooterNavigation.dproj=D:\GitHub\Delphi\HRBluetooth\HRBluetooth.dproj</Transaction>
+  </Transactions>
+</BorlandProject>

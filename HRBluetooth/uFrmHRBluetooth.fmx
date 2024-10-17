@@ -1,0 +1,234 @@
+object frmHRBluetooth: TfrmHRBluetooth
+  Left = 0
+  Top = 0
+  Caption = 'HeaderFooter'
+  ClientHeight = 567
+  ClientWidth = 384
+  Position = ScreenCenter
+  FormFactor.Width = 1440
+  FormFactor.Height = 900
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  DesignerMasterStyle = 0
+  object TopToolBar: TToolBar
+    Anchors = []
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object lblToolBar: TLabel
+      Action = TitleAction
+      Align = Contents
+      Size.Width = 384.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'toollabel'
+      TextSettings.HorzAlign = Center
+    end
+    object btnBack: TSpeedButton
+      Action = actTabPrev
+      Align = MostLeft
+      ImageIndex = -1
+      Size.Width = 65.000000000000000000
+      Size.Height = 44.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = 'backtoolbutton'
+      TextSettings.Trimming = None
+    end
+  end
+  object tabcMain: TTabControl
+    Align = Client
+    FullSize = True
+    Size.Width = 384.000000000000000000
+    Size.Height = 479.000000000000000000
+    Size.PlatformDefault = False
+    TabHeight = 49.000000000000000000
+    TabIndex = 1
+    TabOrder = 1
+    TabPosition = None
+    OnChange = tabcMainChange
+    Sizes = (
+      384s
+      479s
+      384s
+      479s)
+    object tabDevices: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = False
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Devices'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object pnDevices: TPanel
+        Align = Client
+        Size.Width = 384.000000000000000000
+        Size.Height = 313.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object btnScan: TButton
+          Action = actScanHRDevices
+          Align = Bottom
+          ImageIndex = -1
+          Position.Y = 291.000000000000000000
+          Size.Width = 384.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          TextSettings.Trimming = None
+        end
+        object lbDevices: TListView
+          ItemAppearanceClassName = 'TListItemAppearance'
+          ItemEditAppearanceClassName = 'TListItemDeleteAppearance'
+          HeaderAppearanceClassName = 'TListHeaderObjects'
+          FooterAppearanceClassName = 'TListHeaderObjects'
+          Align = Client
+          Size.Width = 384.000000000000000000
+          Size.Height = 291.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          CanSwipeDelete = False
+          OnChange = lbDevicesChange
+        end
+      end
+      object pnDetails: TPanel
+        Align = Bottom
+        Position.Y = 313.000000000000000000
+        Size.Width = 384.000000000000000000
+        Size.Height = 166.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object lbDeviceDetails: TListView
+          ItemAppearanceClassName = 'TListItemAppearance'
+          ItemEditAppearanceClassName = 'TListItemShowCheckAppearance'
+          HeaderAppearanceClassName = 'TListHeaderObjects'
+          FooterAppearanceClassName = 'TListHeaderObjects'
+          Align = Client
+          Size.Width = 384.000000000000000000
+          Size.Height = 166.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          OnItemClick = lbDeviceDetailsItemClick
+        end
+      end
+    end
+    object tabChannels: TTabItem
+      CustomIcon = <
+        item
+        end>
+      TextSettings.Trimming = None
+      IsSelected = True
+      Size.Width = 8.000000000000000000
+      Size.Height = 8.000000000000000000
+      Size.PlatformDefault = False
+      StyleLookup = ''
+      TabOrder = 0
+      Text = 'Device services'
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      object pnService: TPanel
+        Align = Client
+        Size.Width = 384.000000000000000000
+        Size.Height = 281.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        object btnReadData: TButton
+          Action = actReadData
+          Align = Bottom
+          Enabled = False
+          ImageIndex = -1
+          Position.Y = 259.000000000000000000
+          Size.Width = 384.000000000000000000
+          Size.Height = 22.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          TextSettings.Trimming = None
+        end
+        object lbCharacteristics: TListView
+          ItemAppearanceClassName = 'TListItemRightDetailAppearance'
+          ItemEditAppearanceClassName = 'TListItemRightDetailDeleteAppearance'
+          HeaderAppearanceClassName = 'TListHeaderObjects'
+          FooterAppearanceClassName = 'TListHeaderObjects'
+          Align = Client
+          Size.Width = 384.000000000000000000
+          Size.Height = 259.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 1
+          CanSwipeDelete = False
+          OnChange = lbCharacteristicsChange
+        end
+      end
+      object pnData: TPanel
+        Align = Bottom
+        Position.Y = 281.000000000000000000
+        Size.Width = 384.000000000000000000
+        Size.Height = 198.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 0
+        object txtData: TMemo
+          Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+          DataDetectorTypes = []
+          Align = Client
+          Size.Width = 384.000000000000000000
+          Size.Height = 198.000000000000000000
+          Size.PlatformDefault = False
+          TabOrder = 0
+          Viewport.Width = 380.000000000000000000
+          Viewport.Height = 194.000000000000000000
+        end
+      end
+    end
+  end
+  object BottomToolBar: TToolBar
+    Align = Bottom
+    Anchors = [akLeft]
+    Position.Y = 523.000000000000000000
+    Size.Width = 384.000000000000000000
+    Size.Height = 44.000000000000000000
+    Size.PlatformDefault = False
+    StyleLookup = 'bottomtoolbar'
+    TabOrder = 2
+  end
+  object ActionList1: TActionList
+    Left = 232
+    Top = 512
+    object TitleAction: TControlAction
+      Category = 'Tab'
+      Text = 'TitleAction'
+      OnUpdate = TitleActionUpdate
+    end
+    object actTabPrev: TPreviousTabAction
+      Category = 'Tab'
+      TabControl = tabcMain
+      ShortCut = 137
+    end
+    object actTabNext: TNextTabAction
+      Category = 'Tab'
+      TabControl = tabcMain
+    end
+    object actScanHRDevices: TControlAction
+      Text = 'Scan HR devices'
+      OnExecute = actScanHRDevicesExecute
+    end
+    object actReadData: TAction
+      Text = 'ReadData'
+      Enabled = False
+      OnExecute = actReadDataExecute
+    end
+  end
+  object btDevices: TBluetoothLE
+    Enabled = False
+    OnCharacteristicRead = btDevicesCharacteristicRead
+    OnServicesDiscovered = btDevicesServicesDiscovered
+    OnEndDiscoverDevices = btDevicesEndDiscoverDevices
+    Left = 96
+    Top = 504
+  end
+end

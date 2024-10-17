@@ -1,0 +1,76 @@
+inherited frmHRBluetooth_LgXhdpiPh: TfrmHRBluetooth_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  OnKeyUp = FormKeyUp
+  DesignerMasterStyle = 0
+  inherited TopToolBar: TToolBar
+    Size.Width = 450.000000000000000000
+    inherited lblToolBar: TLabel
+      Size.Width = 450.000000000000000000
+    end
+    inherited btnBack: TSpeedButton
+      Visible = False
+    end
+  end
+  inherited tabcMain: TTabControl
+    Size.Width = 450.000000000000000000
+    Size.Height = 607.000000000000000000
+    Sizes = (
+      450s
+      607s
+      450s
+      607s)
+    inherited tabDevices: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited pnDevices: TPanel
+        Size.Width = 450.000000000000000000
+        Size.Height = 441.000000000000000000
+        inherited btnScan: TButton
+          Position.Y = 419.000000000000000000
+          Size.Width = 450.000000000000000000
+        end
+        inherited lbDevices: TListView
+          Size.Width = 450.000000000000000000
+          Size.Height = 419.000000000000000000
+        end
+      end
+      inherited pnDetails: TPanel
+        Position.Y = 441.000000000000000000
+        Size.Width = 450.000000000000000000
+        inherited lbDeviceDetails: TListView
+          Size.Width = 450.000000000000000000
+        end
+      end
+    end
+    inherited tabChannels: TTabItem
+      ExplicitSize.cx = 8.000000000000000000
+      ExplicitSize.cy = 8.000000000000000000
+      inherited pnService: TPanel
+        Size.Width = 450.000000000000000000
+        Size.Height = 409.000000000000000000
+        inherited btnReadData: TButton
+          Position.Y = 387.000000000000000000
+          Size.Width = 450.000000000000000000
+        end
+        inherited lbCharacteristics: TListView
+          Size.Width = 450.000000000000000000
+          Size.Height = 387.000000000000000000
+        end
+      end
+      inherited pnData: TPanel
+        Position.Y = 409.000000000000000000
+        Size.Width = 450.000000000000000000
+        inherited txtData: TMemo
+          Size.Width = 450.000000000000000000
+          Viewport.Width = 450.000000000000000000
+          Viewport.Height = 198.000000000000000000
+        end
+      end
+    end
+  end
+  inherited BottomToolBar: TToolBar
+    Position.Y = 651.000000000000000000
+    Size.Width = 450.000000000000000000
+  end
+end
