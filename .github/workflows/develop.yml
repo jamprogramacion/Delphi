@@ -3,7 +3,7 @@ name: Sync to Azure DevOps
 on:
   push:
     branches:
-      - main
+      - develop
   workflow_dispatch:  # This allows you to manually trigger the workflow
 
 jobs:
@@ -22,6 +22,6 @@ jobs:
     - name: Push to Azure DevOps
       run: |
         git remote add azure https://${{ secrets.AZURE_DEVOPS_PAT }}:@dev.azure.com/jamprogramacion/Delphi/_git/Delphi
-        git push --force azure main
+        git push --force azure develop
       env:
         AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}  # Use the PAT stored in GitHub secrets
