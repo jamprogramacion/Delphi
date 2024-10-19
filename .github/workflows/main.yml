@@ -1,0 +1,27 @@
+name: Sync to Azure DevOps
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:  # This allows you to manually trigger the workflow
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3  # Check out the code from the GitHub repository
+
+    - name: Configure Git for Azure DevOps
+      run: |
+        git config --global user.name "Jesús Avilés Martínez"
+        git config --global user.email "jamprogramacion@ranning.com"
+
+    - name: Push to Azure DevOps
+      run: |
+        git remote add azure https://${{ secrets.AZURE_DEVOPS_PAT }}:@dev.azure.com/jamprogramacion/Delphi/_git/Delphi
+        git push --force azure master
+      env:
+        AZURE_DEVOPS_PAT: ${{ secrets.AZURE_DEVOPS_PAT }}  # Use the PAT stored in GitHub secrets
