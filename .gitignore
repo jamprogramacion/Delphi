@@ -3,7 +3,7 @@
 *.dcu
 *.csv
 *.local
-*.identcache
 Debug/
 __history/
 __recovery/
+*.identcache
